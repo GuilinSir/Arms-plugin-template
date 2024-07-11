@@ -1,10 +1,22 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.guilinsir.armsplugintemplate</id>
-    <name>Arms-plugin-template</name>
-    <vendor>guilinsir</vendor>
+    <name>arms-template-plugin</name>
+    <vendor url="https://github.com/GuilinSir/Arms-plugin-template">GuilinSir</vendor>
+    <description>
+        一键创建 MVPArms 单个页面所需要的全部组件&lt;br /&gt;
+    </description>
 
     <depends>com.intellij.modules.platform</depends>
+    <!-- Product and plugin compatibility requirements -->
+    <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
+    <depends>org.jetbrains.android</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>com.intellij.modules.java</depends>
+<!--    <depends>com.intellij.modules.clion</depends>-->
+    <!--    <depends>com.intellij.modules.androidstudio</depends>-->
+
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
@@ -15,4 +27,8 @@
     <applicationListeners>
         <listener class="com.github.guilinsir.armsplugintemplate.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
+
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider implementation="other.ArmsPluginTemplateProviderImpl" />
+    </extensions>
 </idea-plugin>
