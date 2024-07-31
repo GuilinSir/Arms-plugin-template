@@ -1,3 +1,11 @@
+用于Arms框架快速生成Activity,Fragment
+用法:
+1.AS导入此模板插件
+2.在包名目录右键新建
+3.选择New->Activity->Arms全家桶
+4.修改page name
+5.确认即可新建Activity等相关文件
+说明:此模板就是为了解决AS4.0以后https://github.com/JessYanCoding/MVPArmsTemplate不能用的问题
 # Arms-plugin-template
 
 ![Build](https://github.com/GuilinSir/Arms-plugin-template/workflows/Build/badge.svg)
